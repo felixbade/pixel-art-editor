@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 
-const colors = ['', '#333', '#777', '#ccc']
+const colors = ['', '#444', '#777', '#bbb']
 
 export default function App() {
-    const [color, setColor] = useState(0)
+    const [color, setColor] = useState(2)
     const [drawing, setDrawing] = useState(Array(16).fill(Array(16).fill(0)))
 
     const drawPixel = (x, y, c) => {
@@ -19,7 +19,7 @@ export default function App() {
 
     return (
         <>
-            <button onClick={() => setColor(0)}>Empty</button>
+            <button onClick={() => setColor(0)}>Transparent</button>
             <button onClick={() => setColor(1)} style={{ background: colors[1] }}>Color 1</button>
             <button onClick={() => setColor(2)} style={{ background: colors[2] }}>Color 2</button>
             <button onClick={() => setColor(3)} style={{ background: colors[3] }}>Color 3</button>
@@ -30,7 +30,7 @@ export default function App() {
                     {drawing.map((row, y) =>
                         <tr key={y}>
                             {row.map((cell, x) => 
-                                <td key={[x, y]} onClick={() => {drawPixel(x, y, color)}} style={{ background: colors[cell] }}>{cell}</td>
+                                <td key={[x, y]} onMouseDown={() => {drawPixel(x, y, color)}} onMouseMove={(event => {if (event.buttons === 1) drawPixel(x, y, color)})} style={{ background: colors[cell] }}></td>
                             )}
                         </tr>
                     )}
