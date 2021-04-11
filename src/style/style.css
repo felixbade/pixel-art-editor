@@ -10,15 +10,25 @@ tbody, tr, td {
     margin: 0;
 }
 
-td {
+table.drawing td {
     width: min(5vw, 5vh);
     height: min(5vw, 5vh);
     text-align: center;
     color: hsla(0, 0%, 0%, 10%);
 }
 
-td, table {
+table.drawing, table.drawing td {
     border: 1px solid hsla(0, 0%, 0%, 5%);
+}
+
+table.small td {
+    width: 2px;
+    height: 2px;
+}
+
+
+table.small, table.small td {
+    border: none;
 }
 
 button {
