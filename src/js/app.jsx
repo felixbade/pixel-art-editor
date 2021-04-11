@@ -19,12 +19,11 @@ export default function App() {
 
     return (
         <>
-            <button onClick={() => setColor(0)}>Transparent</button>
-            <button onClick={() => setColor(1)} style={{ background: colors[1] }}>Color 1</button>
-            <button onClick={() => setColor(2)} style={{ background: colors[2] }}>Color 2</button>
-            <button onClick={() => setColor(3)} style={{ background: colors[3] }}>Color 3</button>
+            <button onClick={() => setColor(0)} className={color === 0 ? 'selected': ''}>Transparent</button>
+            <button onClick={() => setColor(1)} style={{ background: colors[1] }} className={color === 1 ? 'selected': ''}>Color 1</button>
+            <button onClick={() => setColor(2)} style={{ background: colors[2] }} className={color === 2 ? 'selected': ''}>Color 2</button>
+            <button onClick={() => setColor(3)} style={{ background: colors[3] }} className={color === 3 ? 'selected': ''}>Color 3</button>
             <br/>
-            <div>Drawing with color: {color}</div>
             <table cellSpacing="0">
                 <tbody>
                     {drawing.map((row, y) =>
