@@ -1,0 +1,41 @@
+{
+  "name": "webapp-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:felixbade/webapp-template.git",
+  "author": "Felix Bade",
+  "private": true,
+  "scripts": {
+    "start": "webpack serve --config webpack.config.js --progress --profile --content-base src/ --env development --mode=development --open",
+    "build": "webpack --progress --mode=production",
+    "lint": "eslint 'src/**'",
+    "lint:fix": "eslint --fix 'src/**'",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/eslint-parser": "^7.13.14",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-react": "^7.13.13",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "css-loader": "^5.2.1",
+    "eslint": "^7.24.0",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-react": "^7.23.2",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.1",
+    "husky": "^6.0.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.31.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
