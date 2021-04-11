@@ -38,6 +38,7 @@ export default function App() {
                     )}
                 </tbody>
             </table>
+            <input type="text" value={JSON.stringify(drawing)} onChange={(event) => setDrawing(JSON.parse(event.target.value))}></input>
         </>
     )
 }
