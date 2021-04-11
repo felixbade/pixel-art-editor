@@ -14,6 +14,7 @@ td {
     width: min(5vw, 5vh);
     height: min(5vw, 5vh);
     text-align: center;
+    color: hsla(0, 0%, 0%, 10%);
 }
 
 td, table {
