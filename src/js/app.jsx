@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 
-const colors = ['', '#444', '#777', '#bbb']
+const colors = ['',
+    'hsl(140, 30%, 25%)',
+    'hsl(140, 30%, 50%)',
+    'hsl(140, 30%, 75%)']
 
 export default function App() {
     const [color, setColor] = useState(2)
