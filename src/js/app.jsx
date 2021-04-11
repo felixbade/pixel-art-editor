@@ -23,7 +23,7 @@ export default function App() {
             <button onClick={() => setColor(3)}>Color 3</button>
             <br/>
             <div>Drawing with color: {color}</div>
-            <table>
+            <table cellSpacing="0">
                 <tbody>
                     {drawing.map((row, y) =>
                         <tr key={y}>
