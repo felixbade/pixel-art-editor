@@ -57,7 +57,7 @@ export const DrawingView = () => {
                         <tr key={y}>
                             {Array(4).fill(null).map((_, i) => i).map((x) =>
                                 <td key={[x, y]}>
-                                    <Drawing drawing={drawing} />
+                                    <Drawing drawing={drawing} colors={colors} />
                                 </td>
                             )}
                         </tr>

@@ -1,12 +1,7 @@
 import React from 'react'
 
-const colors = ['',
-    'hsl(140, 30%, 25%)',
-    'hsl(140, 30%, 50%)',
-    'hsl(140, 30%, 75%)']
-
 // eslint-disable-next-line react/prop-types
-export const Drawing = ({ drawing }) => {
+export const Drawing = ({ drawing, colors }) => {
     return (
         <table cellSpacing="0" className="small">
             <tbody>
