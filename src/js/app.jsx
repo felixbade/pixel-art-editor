@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
+
+import { getSprites, postSprite } from './api'
 
 const colors = ['',
     'hsl(140, 30%, 25%)',
@@ -38,6 +40,13 @@ export default function App() {
         setDrawing(drawing2)
     }
 
+    useEffect(() => {
+        getSprites().then((data) => {
+            const lastDrawing = data[data.length - 1].graphic
+            setDrawing(lastDrawing)
+        })
+    }, [])
+
     return (
         <>
             <button onClick={() => setColor(0)} className={color === 0 ? 'selected': ''}>Transparent</button>
@@ -57,7 +66,7 @@ export default function App() {
                 </tbody>
             </table>
             <input type="text" value={JSON.stringify(drawing)} onChange={(event) => setDrawing(JSON.parse(event.target.value))}></input>
-
+            <button onClick={() => { postSprite({ graphic: drawing }) } }>Publish</button>
             <br/>
             <br/>
             <table cellSpacing="0">
