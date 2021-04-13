@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const config = {
-    baseURL: 'http://localhost:3027/',
+    baseURL: 'https://api.pixels.felixbade.fi/',
 }
 
 export const getSprites = async () => {
