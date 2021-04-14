@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
-import { getSprites, postSprite } from '../api'
+import { postSprite } from '../api'
 import { Drawing } from './Drawing'
 
 const colors = ['',
@@ -21,13 +21,6 @@ export const DrawingView = () => {
         drawing2[y][x] = c
         setDrawing(drawing2)
     }
-
-    useEffect(() => {
-        getSprites().then((data) => {
-            const lastDrawing = data[data.length - 1].graphic
-            setDrawing(lastDrawing)
-        })
-    }, [])
 
     return (
         <>
