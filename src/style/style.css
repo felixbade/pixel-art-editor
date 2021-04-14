@@ -21,6 +21,11 @@ nav {
     color: black;
 }
 
+.nav-item-active {
+    background-color: hsl(0, 0%, 40%);
+    color: white;
+}
+
 .container {
     margin: 10px;
 }
