@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 
-import { postSprite } from '../api'
+import { getSprites, postSprite } from '../api'
 import { Drawing } from './Drawing'
 
 const colors = ['',
@@ -35,7 +35,17 @@ export const DrawingView = () => {
         return () => {
             element.removeEventListener('touchmove', onTouchMove, { passive: false })
         }
-    })
+    }, [])
+
+    useEffect(() => {
+        const hash = window.location.hash.substring(1)
+        if (hash.startsWith('sprite=')) {
+            const drawingId = parseInt(hash.substring(7))
+            getSprites().then(data => {
+                setDrawing(data[drawingId].graphic)
+            })
+        }
+    }, [])
 
     return (
         <>

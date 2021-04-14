@@ -24,7 +24,9 @@ export const FeedView = () => {
             <div className="feed-container">
                 {drawings.map((drawing, i) =>
                     <div className="feed-item" key={i}>
-                        <Drawing drawing={drawing.graphic} colors={colors} />
+                        <a href={`/#sprite=${i}`}>
+                            <Drawing drawing={drawing.graphic} colors={colors} />
+                        </a>
                     </div>
                 )}
             </div>
