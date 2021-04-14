@@ -11,21 +11,21 @@ export default function App() {
     return (
         <Router>
             <nav>
-                <ul>
-                    <li>
-                        <Link to="/">Draw</Link>
-                    </li>
-                    <li>
-                        <Link to="/feed">Feed</Link>
-                    </li>
-                </ul>
+                <div className="nav-item">
+                    <Link to="/">Draw</Link>
+                </div>
+                <div className="nav-item">
+                    <Link to="/feed">Feed</Link>
+                </div>
             </nav>
 
-            <Switch>
-                <Route component={DrawingView} exact path="/" />
-                <Route component={FeedView} exact path="/feed" />
-                <Route component={PageNotFound} path="*" />
-            </Switch>
+            <div className="container">
+                <Switch>
+                    <Route component={DrawingView} exact path="/" />
+                    <Route component={FeedView} exact path="/feed" />
+                    <Route component={PageNotFound} path="*" />
+                </Switch>
+            </div>
         </Router>
     )
 }
