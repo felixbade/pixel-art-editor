@@ -1,2 +1,2 @@
-# webapp-template
-Webpack, eslint, yarn script etc.
+# pixel-art-editor
+A tool for creating pixel art sprites for games.
