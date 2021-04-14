@@ -47,3 +47,13 @@ button {
 button:active {
     color: black;
 }
+
+.feed-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.feed-item {
+    display: flex;
+    margin: 2px;
+}

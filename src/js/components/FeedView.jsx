@@ -21,13 +21,13 @@ export const FeedView = () => {
 
     return (
         <>
-            <ul>
+            <div className="feed-container">
                 {drawings.map((drawing, i) =>
-                    <li key={i}>
+                    <div className="feed-item" key={i}>
                         <Drawing drawing={drawing.graphic} colors={colors} />
-                    </li>
+                    </div>
                 )}
-            </ul>
+            </div>
         </>
     )
 }
